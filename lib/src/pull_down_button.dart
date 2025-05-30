@@ -217,6 +217,7 @@ class PullDownButton extends StatefulWidget {
     this.routeTheme,
     this.animationAlignmentOverride,
     this.useRootNavigator = false,
+    this.requestFocus = true,
     this.routeSettings,
   });
 
@@ -352,6 +353,8 @@ class PullDownButton extends StatefulWidget {
   /// parent navigators.
   final bool useRootNavigator;
 
+  final bool requestFocus;
+  
   /// Optional route settings for the pull-down menu.
   ///
   /// See [RouteSettings] for details.
@@ -420,6 +423,7 @@ class _PullDownButtonState extends State<PullDownButton> {
       menuOffset: widget.menuOffset,
       scrollController: widget.scrollController,
       useRootNavigator: widget.useRootNavigator,
+      requestFocus: widget.requestFocus,
       routeSettings: widget.routeSettings,
     );
 
